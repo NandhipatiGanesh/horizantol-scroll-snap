@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      
+      
+        .slider::-webkit-scrollbar {
+    display: none;
+}
+        .slider {
+            font-family: sans-serif;
+            scroll-snap-type: x mandatory;    
+            display: flex;
+            -webkit-overflow-scrolling: touch;
+            overflow-x: scroll;
+             scrollbar-width: none;
+        }
+        .section-h {
+            border-radius:40px;
+            padding: 1rem;
+            min-width: 100%;
+            height: auto;
+            scroll-snap-align: start;
+            box-shadow: 0 3px 30px rgba(0, 0, 0, 0.02);
+            background:white;
+            position: relative;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <section class="section-h">
+            <h3>Send brief</h3>
+            <p>Please provide us with a comprehensive project brief, including the necessary documentation requirements, to initiate the estimation process and commence the project.
+
+</p>
+        </section>
+        <section class="section-h">
+            <h3>Stay in touch</h3>
+            <p>Please assess the initial findings and share your feedback to guide our further actions, whether it involves proceeding with the current course or implementing corrections.
+
+</p>
+        </section>
+        <section class="section-h">
+            <h3>Approve</h3>
+            <p>Give your approval for the draft of the services you find satisfactory and wish for us to proceed with delivering.
+
+</p>
+        </section>
+        <section class="section-h">
+            <h3>See online</h3>
+            <p>Experience Superior Service Delivery Online: Receive Impeccable Quality On Time and Share Your Feedback If Satisfied.
+
+</p>
+        </section>
+    </div>
+    <script>
+        const init = function(){
+            let items = document.querySelectorAll('.section-h');
+            for (let i = 0; i < items.length; i++){
+                items[i].style.background = randomColor({luminosity: 'light'});
+            }
+            cssScrollSnapPolyfill();
+        }
+        init();
+    </script>
+</body>
+</html>
